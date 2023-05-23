@@ -47,9 +47,7 @@
 ;;    ubicada en tal posición es un diptongo o un hiato. En caso contrario, marcará false. 
 ;;    PISTA: Convendría definir las vocales; el namespace clojure.set puede ser de ayuda. (valor 5pts).
 
-(defn obtener-diptongos-y-hiatos
-  [palabras]
-  nil)
+
 
 ;; 2. La siguiente función recibe como parámetro un número que representa la temperatura en grados celcius. Si la 
 ;;    temperatura se encuentra por debajo de los 0 grados debe retornar "helado"; si se encuentra entre los 0 y los 10 
@@ -62,15 +60,23 @@
 ;;          es decir, 'b < a'.
 
 (defn evaluar-temperatura 
-  [temp]
-  nil)
+  "devueleve temperatura"
+  [temp](let [x 10]
+          (if (and (> x 0) (< x 9))
+           "helado" 
+            "frio"
+           )))
+(evaluar-temperatura )
+          
 
 ;; 3. Esta función recibe como argumentos un mapa con la forma {:producto "producto1" :precio 3920} y un número que representa el descuento
 ;;    que se le va a aplicar. Debe devolver el mismo mapa con el precio actualizado. (valor 2.5pts)
 
 (defn aplicar-descuento
   [producto descuento]
-  {:producto "X" :precio 0})
+   {:producto "campera":precio 12432})
+
+(aplicar-descuento )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; EJERCICIO ADICIONAL ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
