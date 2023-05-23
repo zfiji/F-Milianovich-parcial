@@ -47,7 +47,23 @@
 ;;    ubicada en tal posición es un diptongo o un hiato. En caso contrario, marcará false. 
 ;;    PISTA: Convendría definir las vocales; el namespace clojure.set puede ser de ayuda. (valor 5pts).
 
+(def hiatos [:barbacoa :caos])
+(def diptongos #{:prueba :aullar :feudo :maullar :precaución :auto :auxilio})
 
+
+(println (let [x hiatos] (if not (= x)
+                             "es hiato"
+                             "no es hiato")))
+
+
+
+(defn obtener-diptongos-y-hiatos
+  [palabras] (let [x hiatos] (if (= x)
+                               "es hiato"
+                               "no es hiato"))
+  nil)
+
+(obtener-diptongos-y-hiatos :barbacoa)
 
 ;; 2. La siguiente función recibe como parámetro un número que representa la temperatura en grados celcius. Si la 
 ;;    temperatura se encuentra por debajo de los 0 grados debe retornar "helado"; si se encuentra entre los 0 y los 10 
